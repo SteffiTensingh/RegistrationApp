@@ -8,7 +8,6 @@ Flask==3.0.3
 google-auth==2.32.0
 google-auth-oauthlib==1.2.1
 gspread==6.1.2
-heroku ps
 httplib2==0.22.0
 idna==3.7
 importlib_metadata==8.2.0
