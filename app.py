@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect
-import gspread, os
-from    oauth2client.service_account import ServiceAccountCredentials
+import gspread
+import os
+from oauth2client.service_account import ServiceAccountCredentials
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # Google Sheets API setup
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
@@ -35,4 +36,3 @@ def submit():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
-

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: gdrm-weekend-getaway
+    env: python
+    plan: free  # Adjust the plan according to your needs
+    region: sydney  # Specify the region as Sydney for Australia
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: GOOGLE_APPLICATION_CREDENTIALS
+        value: credentials.json  # Path to the credentials file in the deployed environment
