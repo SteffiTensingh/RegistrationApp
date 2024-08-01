@@ -3,7 +3,6 @@ services:
     name: gdrm-weekend-getaway
     env: python
     plan: free  # Adjust the plan according to your needs
-    region: sydney  # Specify the region as Sydney for Australia
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn app:app"
     envVars:
